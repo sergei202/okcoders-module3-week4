@@ -1,0 +1,60 @@
+<h2>Examples:</h2>
+
+<div class="card">
+	<div class="card-body">
+		<div class="row">
+			<div class="col">
+				<input class="form-control" [(ngModel)]="num1" type="number">
+			</div>
+			<div class="col">
+				<input class="form-control" [(ngModel)]="num2" type="number">
+			</div>
+			<div class="col">
+				<button class="btn btn-primary" (click)="addNumbers()">Add</button>
+			</div>
+		</div>
+
+		{{num1}} added to {{num2}} = {{answer}}
+
+	</div>
+</div>
+
+
+
+
+<div class="card">
+	<div class="card-body">
+		<b>Server Time:</b> {{serverTime}}
+	</div>
+</div>
+
+<div class="card">
+	<div class="card-body">
+		<b>Uptime:</b> {{uptime}}s
+	</div>
+</div>
+
+<div class="card">
+	<div class="card-body">
+		<b>Counter:</b> {{count}}
+		<p><small class="text-muted">This counter increases everytime the page is refreshed (or the route is triggered)</small></p>
+	</div>
+</div>
+
+<div class="card">
+	<div class="card-body">
+		<div class="row">
+			<div class="col">
+				<input class="form-control" [(ngModel)]="textInput" placeholder="Text to echo">
+			</div>
+			<div class="col">
+				<button class="btn btn-primary" (click)="echoText()" [disabled]="!textInput">Echo</button>
+			</div>
+		</div>
+
+		<div class="mt-2" *ngIf="echoResult">
+			<p><b>Orignal Text:</b> {{echoResult.original}}</p>
+			<p><b>All Caps:</b> {{echoResult.caps}}</p>
+		</div>
+	</div>
+</div>
